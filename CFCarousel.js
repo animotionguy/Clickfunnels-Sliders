@@ -1,7 +1,7 @@
 (function ( $ ) {
   $.fn.cfCarousel = function ( carouselsettings ) {
 
-    var settings = $.extend( {}, $.fn.cfUnslider.defaults, carouselsettings );
+    var settings = $.extend( {}, $.fn.cfCarousel.defaults, carouselsettings );
 
     return this.each(function () {
 		$(this).find(settings.slides).wrap("<li></li>");
