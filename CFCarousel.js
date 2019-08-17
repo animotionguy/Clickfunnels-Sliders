@@ -1,7 +1,7 @@
 (function ( $ ) {
-  $.fn.cfCarousel = function ( carouselsettings ) {
+  $.fn.cfUnslider = function ( options ) {
 
-    var settings = $.extend( {}, $.fn.cfCarousel.defaults, carouselsettings );
+    var settings = $.extend( {}, $.fn.cfUnslider.defaults, options );
 
     return this.each(function () {
 		$(this).find(settings.slides).wrap("<li></li>");
@@ -29,7 +29,7 @@
 	});
   }
 
-  $.fn.cfCarousel.defaults = {
+  $.fn.cfUnslider.defaults = {
     container: ".col-inner",
     slides: ".elImageWrapper",
     autoplay: true,
@@ -39,5 +39,4 @@
     animation: "horizontal",
     nav: false
   };
-}
-(jQuery));
+}(jQuery));
