@@ -4,11 +4,10 @@
     var settings = $.extend( {}, $.fn.cfCarousel.defaults, options);
 
     return this.each(function () {
-		// $(this).find(settings.slides).wrap("<div></div>");
+		$(this).find(settings.slide).wrap("<div></div>");
 		$(this).slick(
 	      {
-          container: 'div',
-	        slide: 'div',
+          slide: 'div',
           centermode: settings.centermode,
           dots: settings.dots,
 	        autoplay: settings.autoplay,
@@ -21,8 +20,11 @@
 	});
   }
 
+  $('section').filter(function() {
+    return $(this).data('Carousel') == myEm;
+  }).addClass('carousel');
+
   $.fn.cfCarousel.defaults = {
-    container:".col-inner"
     slide: ".elImageWrapper",
     centermode: true,
     dots: true,
