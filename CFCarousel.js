@@ -1,42 +1,32 @@
 (function ( $ ) {
-  $.fn.cfUnslider = function ( options ) {
+  $.fn.cfCarousel = function ( options ) {
 
-    var settings = $.extend( {}, $.fn.cfUnslider.defaults, options );
+    var settings = $.extend( {}, $.fn.cfCarousel.defaults, options);
 
     return this.each(function () {
-		$(this).find(settings.slides).wrap("<li></li>");
-		$(this).unslider(
+		// $(this).find(settings.slides).wrap("<div></div>");
+		$(this).slick(
 	      {
-	        selectors: {
-	          container: settings.container,
-	          slides: 'li'
-	        },
+	        slides: 'div',
+          centermode: settings.centermode,
+          dots: settings.dots,
 	        autoplay: settings.autoplay,
 	        infinite: settings.infinite,
 	        arrows: settings.arrows,
-	        delay: settings.delay,
-	        animation: settings.animation,
-	        nav: settings.nav
+          pauseonHover: settings.pauseonHover,
+          pauseOnDotsHover:settings.pauseOnDotsHover,
+	        autoplaySpeed: settings.autoplaySpeed,
 	      });
-
-		$(this).on("mouseover",function () {
-			$(this).unslider('stop');
-		});
-
-		$(this).on("mouseout",function () {
-			$(this).unslider('start');
-		});
 	});
   }
 
-  $.fn.cfUnslider.defaults = {
-    container: ".col-inner",
+  $.fn.cfCarousel.defaults = {
     slides: ".elImageWrapper",
+    centermode: true,
+    dots: true,
     autoplay: true,
     infinite: true,
     arrows: false,
-    delay: 3000,
-    animation: "horizontal",
-    nav: false
+    autoplaySpeed:8000,
   };
 }(jQuery));
