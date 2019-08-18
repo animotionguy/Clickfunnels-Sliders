@@ -21,7 +21,7 @@
   }
 
   $.fn.cfCarousel.defaults = {
-    slides: ".elImageWrapper",
+    slide: ".elImageWrapper",
     centermode: true,
     dots: true,
     autoplay: true,
