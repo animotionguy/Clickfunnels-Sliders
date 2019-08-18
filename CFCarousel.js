@@ -7,7 +7,7 @@
 		// $(this).find(settings.slides).wrap("<div></div>");
 		$(this).slick(
 	      {
-	        slides: 'div',
+	        slide: 'div',
           centermode: settings.centermode,
           dots: settings.dots,
 	        autoplay: settings.autoplay,
