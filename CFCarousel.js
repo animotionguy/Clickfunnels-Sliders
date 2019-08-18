@@ -7,6 +7,7 @@
 		// $(this).find(settings.slides).wrap("<div></div>");
 		$(this).slick(
 	      {
+          container: 'div',
 	        slide: 'div',
           centermode: settings.centermode,
           dots: settings.dots,
@@ -21,6 +22,7 @@
   }
 
   $.fn.cfCarousel.defaults = {
+    container:".col-inner"
     slide: ".elImageWrapper",
     centermode: true,
     dots: true,
