@@ -20,9 +20,7 @@
 	});
   }
 
-  $('section').filter(function() {
-    return $(this).data('Carousel') == myEm;
-  }).addClass('carousel');
+  $( 'section[ title=Carousel ]' ).addClass('carousel');
 
   $.fn.cfCarousel.defaults = {
     slide: ".elImageWrapper",
