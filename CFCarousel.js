@@ -22,6 +22,8 @@
 
   $( 'section[ title=Carousel ]' ).addClass('carousel');
 
+  var dTitle = $('section')
+
   $.fn.cfCarousel.defaults = {
     slide: ".elImageWrapper",
     centermode: true,

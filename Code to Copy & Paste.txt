@@ -1,5 +1,37 @@
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel ="stylesheet" href = "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+<script src = "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type = "text/javascript"></script>
 
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src = "https://d2saw6je89goi1.cloudfront.net/uploads/digital_asset/file/578410/CFCarousel.js" type = "text/javascript"></script>
 
-<script src = "https://raw.githubusercontent.com/animotionguy/Clickfunnels-Sliders/master/CFCarousel.js?token=AJG55FVK3VJHFIAU4EDXUCC5K5JDM" type = "text/javascript"></script>
+<script>
+
+$(document).ready(function(){
+   $('div[data-title="Carousel"] > .containerInner').addClass('carousel');
+   $('.carousel').slick({
+    slide: ".row",
+    slidesToShow: 3,
+    dots: true,
+    autoplay: true,
+    infinite: true,
+    arrows: true,
+    autoplaySpeed:8000,
+    adaptiveHeight: true,
+     responsive: [
+     {
+       breakpoint: 1040,
+        settings: {
+        autoplay: true,
+        infinite: true,
+        arrows: false,
+        arrows: true,
+        slidesToShow: 2
+                  }
+     },
+     {   breakpoint: 770,
+           settings: "unslick"
+     },
+      ]
+   });
+});
+</script>
